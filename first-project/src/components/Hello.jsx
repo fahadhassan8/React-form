@@ -8,9 +8,9 @@ const func = () => "Whats up!";
 // properties or props use to make component dynamic
 
 // more precise way to use props in func parameter
-function Hello({ name, message, emoji }) {
-  return (
-    <>
+// function Hello({ name, message, emoji, seatNumbers }) {
+  // return (
+    // <>
       {/* <h1>Hello Future AI Engineer {name}</h1>
       <p>{func()}</p> */}
       {/* <h1>Hello Future AI Engineer {8*8}</h1> */}
@@ -19,11 +19,19 @@ function Hello({ name, message, emoji }) {
       {/* <h1>{props.message} {props.name}</h1> */}
 
       {/* destructuring of props */}
-      <h1>
-        {message} {emoji} {name}
-      </h1>
+//       <h1>
+//         {message} {emoji} {name} {seatNumbers}
+//       </h1>
+//     </>
+//   );
+// }
+
+function Hello({person}){
+  return (
+    <>
+    <h1>{person.message} {person.name} {person.emoji} {person.seatNumbers}</h1>
     </>
-  );
+  )
 }
 
 export default Hello;
